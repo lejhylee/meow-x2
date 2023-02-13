@@ -96,13 +96,13 @@ const Register = () => {
 
     return (
        
-        <div className='container-fluid '>
+        <div className='container-fluid'>
             <div className="row h-100">
                 <div className="col-md-7 col-lg-8">
-                    <div id="RgMap" style={{ "width": "100%", "height": "calc(100% - 60px)" }}></div>
+                    <div className="rg-map" id="RgMap" style={{ "width": "100%"}}></div>
                 </div>
-                <div className='col-md-5 col-lg-4'>
-                    <div className="ip-are h-100">
+                <div className='col-md-5 col-lg-4 ip-are'>
+                    <div className="h-100">
                          <h1 className='display-4 fw-bold text-center'>xxxxx</h1>
                         <form className="needs-validation">
                             <div className="col-12">
@@ -121,6 +121,8 @@ const Register = () => {
                                 <label className='form-label'>COUNT</label>
                                 <input type="text" className="form-control" id="count" />
                             </div>
+                            <hr className='my-4'></hr>
+                            <button className="w-100 btn btn-lg cst-btn" type="submit">lez git</button>
                         </form>
                     </div>
                 </div>
