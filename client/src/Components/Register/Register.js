@@ -96,13 +96,14 @@ const Register = () => {
 
     return (
        
-        <div className='container-fluid h-100'>
+        <div className='container-fluid '>
             <div className="row h-100">
                 <div className="col-md-7 col-lg-8">
                     <div id="RgMap" style={{ "width": "100%", "height": "calc(100% - 60px)" }}></div>
                 </div>
                 <div className='col-md-5 col-lg-4'>
                     <div className="ip-are h-100">
+                         <h1 className='display-4 fw-bold text-center'>xxxxx</h1>
                         <form className="needs-validation">
                             <div className="col-12">
                                 <label className='form-label'>NAME</label>

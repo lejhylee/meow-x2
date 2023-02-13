@@ -1,1 +1,16 @@
 .ip-are{background-color: #acbc8a;}
+@media (min-width: 576px) {
+    .ip-are { padding-top: 100px;}
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+@media (min-width: 1400px) {
+}
