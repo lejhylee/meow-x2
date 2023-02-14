@@ -1,18 +1,35 @@
 import React from "react";
 import useForm from "./useForm";
 
-const RegistForm = () => {
+function RegistForm() {
+    const { values, errors, submitting, handleChange, handleSubmit } = useForm ({
+        initialValues: { houseName: "", type : "" },
+        onSubmit: (values) => {
+            console.log(values);
+            alert(JSON.stringify(values, null, 2));
+        },
+    });
 
     return (
-         <form>
+         <form onSubmit={handleSubmit} noValidate>
             <div className="row">
                 <div className="col-12">
                     <label className='form-label'>NAME</label>
-                    <input type="text" className="form-control" name="houseName" id="houseName" />
+                    <input className="form-control"
+                        name="houseName"
+                        type="text" 
+                        value={values.houseName}
+                        onChange={handleChange}
+                    />
                 </div>
                 <div className="col-md-5">
                     <label className='form-label'>TYPE</label>
-                    <input type="text" className="form-control" id="type" />
+                    <input className="form-control"
+                        type="text" 
+                        name="type"
+                        value={values.type}
+                        onChange={handleChange}
+                    />
                 </div>
                 <div className="col-md-4">
                     <label className='form-label'>MANAGE</label>
@@ -24,7 +41,7 @@ const RegistForm = () => {
                 </div>
             <hr className='my-4'></hr>
             <div className="d-grid gap-2 col-6 mx-auto">
-                 <button className="w-100 btn btn-lg cst-btn" type="submit">lez git</button>
+                 <button className="w-100 btn btn-lg cst-btn" type="submit" disabled={submitting}>lez git</button>
             </div>
             </div>   
         </form>
