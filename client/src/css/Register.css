@@ -1,8 +1,10 @@
 .pd {padding: 0 !important; }
+.base-hg {height: calc(100vh - 60px)}
 .ip-are{background-color: #acbc8a;}
 .cst-btn{background-color: #9d6262;}
 .rg-map {height: 500px;}
 .ip-are { margin-top: 0;} 
+
 
 /*~px 이하*/
 @media (max-width: 575.98px) {
