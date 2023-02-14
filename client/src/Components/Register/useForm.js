@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 //React Hook 선언하기
-function useForm({ initialValues, onSubmit, validate }) {
+function useForm({ initialValues, onSubmit }) {
     //상태관리
     //모든 입력값과 오류메시지 그리고 제출 처리중 여부를 저장할 상태 변수와 변경 함수를 정의
     //이 Hook을 사용하는 컴포넌트에서 상태를 읽을수 있도록 리턴
@@ -23,9 +23,8 @@ function useForm({ initialValues, onSubmit, validate }) {
     //이 Hook을 사용하는 컴포넌트에서 제출 버튼에 이 이벤트 랜들러를 설정할수 있도록 리턴
     const handleSubmit = async (event) => {
         setSubmitting(true);
-        event.preventDefalut();
+        event.preventDefault();
         await new Promise((r) => setTimeout(r, 1000));
-        setErrors(validate(values));
     }
 
     useEffect(() => {
@@ -35,13 +34,14 @@ function useForm({ initialValues, onSubmit, validate }) {
             }
             setSubmitting(false);
         }
-    }, [errors]);
+    }, []);
     
     return {
         values,
         errors,
         submitting,
         handleChange,
+        handleSubmit,
     }
 }
 export default useForm;
