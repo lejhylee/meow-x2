@@ -96,7 +96,7 @@ const Register = () => {
 
     return (
        
-        <div className='container-fluid'>
+        <div className='container-fluid base-hg'>
             <div className="row h-100">
                 <div className="col-xl-12 col-xxl-8 pd">
                     <div className="rg-map" id="RgMap" style={{ "width": "100%" , "height" : "100%"}}></div>
