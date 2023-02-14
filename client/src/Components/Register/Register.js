@@ -2,7 +2,7 @@
 import { linearFindNearest } from 'ol/array';
 import React, { useEffect } from 'react';
 import './../../css/Register.css';
-
+import RegistForm from './RegistForm';
 const Register = () => {
 
     useEffect(() => {
@@ -98,32 +98,13 @@ const Register = () => {
        
         <div className='container-fluid'>
             <div className="row h-100">
-                <div className="col-md-7 col-lg-8">
-                    <div className="rg-map" id="RgMap" style={{ "width": "100%"}}></div>
+                <div className="col-xl-12 col-xxl-8 pd">
+                    <div className="rg-map" id="RgMap" style={{ "width": "100%" , "height" : "100%"}}></div>
                 </div>
-                <div className='col-md-5 col-lg-4 ip-are'>
+               <div className='col-xl-12 col-xxl-4 ip-are'>
                     <div className="h-100">
-                         <h1 className='display-4 fw-bold text-center'>xxxxx</h1>
-                        <form className="needs-validation">
-                            <div className="col-12">
-                                <label className='form-label'>NAME</label>
-                                <input type="text" className="form-control" id="houseName" />
-                            </div>
-                            <div className="col-md-5">
-                                <label className='form-label'>TYPE</label>
-                                <input type="text" className="form-control" id="type" />
-                            </div>
-                            <div className="col-md-4">
-                                <label className='form-label'>MANAGE</label>
-                                <input type="text" className="form-control" id="manage" />
-                            </div>
-                            <div className="col-md-3">
-                                <label className='form-label'>COUNT</label>
-                                <input type="text" className="form-control" id="count" />
-                            </div>
-                            <hr className='my-4'></hr>
-                            <button className="w-100 btn btn-lg cst-btn" type="submit">lez git</button>
-                        </form>
+                        <h1 className='display-4 fw-bold text-center'>xxxxx</h1>
+                        <RegistForm></RegistForm>
                     </div>
                 </div>
             </div>
