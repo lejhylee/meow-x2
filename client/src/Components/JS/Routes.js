@@ -13,7 +13,6 @@ function Routes() {
                 <Route path="/login">
                     <Login />
                 </Route>
-
                 <Route path="/">
                     <Main />
                 </Route>
